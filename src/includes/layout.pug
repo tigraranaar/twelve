@@ -1,0 +1,297 @@
+.main
+  .header
+    .header__title
+      .header__logo
+        include ../images/logo.svg
+      h1.header__titlename Delivery
+    .menu 
+      ul.nav__menu
+        li.nav__item
+          a.nav__link
+            include ../images/n1.svg
+        li.nav__item
+          a.nav__link
+            include ../images/n2.svg
+        li.nav__item
+          a.nav__link.nav__link--notif
+            include ../images/n3.svg        
+        li.nav__item
+          a.nav__link
+            include ../images/n4.svg
+
+  .wrapper
+    .sidebar
+      ul.sidebar__menu
+        li.sidebar__item
+          a.sidebar__link
+            include ../images/m1.svg
+            h2.sidebar__title Dashboard
+        li.sidebar__item
+          a.sidebar__link
+            include ../images/m2.svg
+            h2.sidebar__title Administrators
+        li.sidebar__item.sidebar__item--active
+          a.sidebar__link
+            include ../images/m3.svg
+            h2.sidebar__title Settings
+        li.sidebar__item
+          a.sidebar__link
+            include ../images/m4.svg
+            h2.sidebar__title How it works
+        li.sidebar__item
+          a.sidebar__link
+            include ../images/m5.svg
+            h2.sidebar__title Support
+    .section
+      .section__sidebar
+        h2.section__title Settings
+        ul.section__nav
+          li.section__item
+            a.section__link#section__link1(data-foo='section1') Company info
+          li.section__item.section__item--active 
+            a.section__link.section__link--active#section__link2(data-foo='section2') Առաքման Կարգավորումներ
+          li.section__item
+            a.section__link#section__link3(data-foo='section3') Բանկային ռեկվիզիտներ
+          li.section__item
+            a.section__link#section__link4(data-foo='section4') Կոնտակտներ
+          li.section__item
+            a.section__link#section__link5(data-foo='section5') Էջի կարգավորումներ
+          li.section__item
+            a.section__link#section__link6(data-foo='section6') Նկարներ
+          li.section__item
+            a.section__link#section__link7(data-foo='section7') Պայմանագիր
+
+
+      .section__box#section1 
+        h2 Section 1
+      .section__box#section3
+        h2 Section 3      
+      .section__box#section4
+        h2 Section 4      
+      .section__box#section5
+        h2 Section 5      
+      .section__box#section6
+        h2 Section 6    
+      .section__box#section7
+        h2 Section 7      
+
+      .section__box#section2
+        h4.section__title Ավելացնել քաշ
+
+        .input__box
+          .input__item
+            h5.section__label Կգ *
+            input(type="text")
+          .input__item
+            h5.section__label Բարձր․ (սմ) *
+            input(type="text")   
+          .input__item
+            h5.section__label Երկ․ (սմ) *
+            input(type="text")
+          .input__item
+            h5.section__label Լայն․ (սմ) *
+            input(type="text")                   
+          .input__item
+            button Add                    
+
+        h4.section__title.section__title2 Քաշեր
+        table
+          tr
+            th Կգ
+            th Բարձր․ (սմ)
+            th Երկ․ (սմ)
+            th Լայն․ (սմ)
+            th 
+            th Action
+          tr
+            td 
+              input(type="text", value="10")
+            td 
+              input(type="text", value="10")
+            td
+              input(type="text", value="10")
+            td
+              input(type="text", value="10")
+            td
+              button.acceptButton Accept
+            td 
+              button.cancelButton Cancel
+              
+          tr
+            td 1
+            td 10
+            td 24
+            td 2
+            td.td--edit
+              include ../images/edit.svg
+            td 
+              include ../images/delete.svg 
+          tr
+            td 1
+            td 10
+            td 24
+            td 2
+            td.td--edit
+              include ../images/edit.svg
+            td 
+              include ../images/delete.svg
+          tr
+            td 1
+            td 10
+            td 24
+            td 2
+            td.td--edit
+              include ../images/edit.svg
+            td 
+              include ../images/delete.svg
+          tr
+            td 1
+            td 10
+            td 24
+            td 2
+            td.td--edit
+              include ../images/edit.svg
+            td 
+              include ../images/delete.svg                                                       
+          
+
+
+        h4.section__title.section__title3 Ընտրել առաքման երկրներ
+        h5.section__label Ընտրել այն երկրները որտեղ կարող եք առաքում անել
+
+        .dropdownBox
+          h5.section__label Որտեղից
+          select.select1  
+            option Volvo
+            option Volvo
+          select  
+            option Volvo
+            option Volvo
+          select  
+            option Volvo
+            option Volvo
+
+        .dropdownBox
+          h5.section__label Ուր
+          select.select1  
+            option Volvo
+            option Volvo
+          select  
+            option Volvo
+            option Volvo
+          select  
+            option Volvo
+            option Volvo
+
+        .checkbox 
+          .checkbox__input
+            label.checkbox__container
+              input(type="checkbox", checked="checked")
+              span.checkmark
+
+            h5.checkbox__label Նշել նաև հակառակ ուղղությունը
+
+          button.checkbox__Button Նոր ուղղություն
+
+        h4.section__title Ուղղություններ/ժամեր/գներ
+        h5.section__label.country__label Նշեք ձեր ընտրած ուղղությունների գները
+
+        ul.country__section
+          li.country__item
+            a.country__plus(href="") 
+              include ../images/plus.svg
+            span.country__name Kirgistan
+            span.country__arrow
+              include ../images/arrow.svg 
+            span.country__name Kirgistan
+          li.country__item
+            a.country__plus(href="") 
+              include ../images/plus.svg
+            span.country__name Kirgistan
+            span.country__arrow
+              include ../images/arrow.svg 
+            span.country__name Russia
+          li.country__item
+            a.country__plus(href="") 
+              include ../images/plus.svg
+            span.country__name Kirgistan
+            span.country__arrow
+              include ../images/arrow.svg 
+            span.country__name Kirgistan     
+          li.country__item
+            a.country__plus(href="") 
+              include ../images/plus.svg
+            span.country__name Kirgistan
+            span.country__arrow
+              include ../images/arrow.svg 
+            span.country__name Belarus
+          li.country__item
+            a.country__plus(href="") 
+              include ../images/plus.svg
+            span.country__name Kirgistan
+            span.country__arrow
+              include ../images/arrow.svg 
+            span.country__name Armenia            
+
+          li.country__item.country__item--active
+            a.country__plus(href="") 
+              include ../images/minus.svg
+            span.country__name Russia
+            span.country__arrow
+              include ../images/arrow.svg 
+            span.country__name Armenia   
+
+            ul.country__section--active.country__section--active
+              li.country__item
+                a.country__plus(href="") 
+                  include ../images/minus.svg
+                span.country__name Մարզ
+                span.country__arrow
+                  include ../images/arrow.svg 
+                span.country__name Մարզ
+              ul.country__section--active.country__section--active
+                li.country__item
+                  a.country__plus(href="") 
+                  span.country__name Մարզ/Քաղաք
+                  span.country__arrow
+                    include ../images/arrow.svg 
+                  span.country__name Մարզ/Քաղաք
+                li.country__item
+                  a.country__plus(href="")
+                  span.country__name Մարզ/Քաղաք
+                  span.country__arrow
+                    include ../images/arrow.svg 
+                  span.country__name Մարզ/Քաղաք     
+                li.country__item
+                  a.country__plus(href="")              
+                  span.country__name Մարզ/Քաղաք
+                  span.country__arrow
+                    include ../images/arrow.svg 
+                  span.country__name Մարզ/Քաղաք     
+                li.country__item
+                  a.country__plus(href="")              
+                  span.country__name Մարզ/Քաղաք
+                  span.country__arrow
+                    include ../images/arrow.svg 
+                  span.country__name Մարզ/Քաղաք     
+                li.country__item
+                  a.country__plus(href="")              
+                  span.country__name Մարզ/Քաղաք
+                  span.country__arrow
+                    include ../images/arrow.svg 
+                  span.country__name Մարզ/Քաղաք                     
+
+          li.country__item
+            a.country__plus(href="") 
+              include ../images/plus.svg
+            span.country__name Belarus
+            span.country__arrow
+              include ../images/arrow.svg 
+            span.country__name Kirgistan
+          li.country__item
+            a.country__plus(href="") 
+              include ../images/plus.svg
+            span.country__name Belarus
+            span.country__arrow
+              include ../images/arrow.svg 
+            span.country__name Russia                     
